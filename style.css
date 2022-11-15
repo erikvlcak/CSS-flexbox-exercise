@@ -1,0 +1,55 @@
+/* * {
+    border: solid 1px red;
+} */
+
+body {
+    font-family: 'Indie Flower', cursive;
+    margin: 0px;
+    padding: 0px;
+    min-height: 100vh;
+}
+
+.header img {
+    width: 60px;
+    height: 60px;
+
+}
+
+.header {
+    display: flex;
+    background-color: skyblue;
+    padding: 8px 64px;
+    align-items: center;
+    border-top: 12px solid rgb(47, 179, 231);
+    border-bottom: 12px solid rgb(47, 179, 231);
+}
+
+.header-items {
+    list-style-type: none;
+    padding: 0px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 32px;
+    flex: 1 0 0;
+}   
+
+.page-name {
+    margin-right: auto;
+    padding-left: 32px;
+    font-weight: 900;
+    font-size: 46px;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-weight: 300;
+    font-size: 32px;
+}
+
+a:hover {
+    font-weight: 900;
+    text-decoration: underline white 3px;
+}
