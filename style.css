@@ -47,7 +47,7 @@ body {
     color: white;
 }
 
-a {
+.header-items a {
     text-decoration: none;
     color: white;
     font-weight: 300;
@@ -57,13 +57,13 @@ a {
 
 a:hover {
     font-size: 30px;
-    color: gold;
-    text-decoration: underline gold 1px;
+    text-decoration: underline white 1px;
 }
 
 .content {
     flex: 1;
     display: flex;
+    flex-direction: column;
 }
 
 .content-top {
@@ -73,6 +73,7 @@ a:hover {
     justify-content: center;
     flex: 1;
     gap: 50px;
+    min-height: 70vh;
     background-image: url(./images/white-cloud-sky-background.jpg);
     background-size: cover;
 }
@@ -142,7 +143,7 @@ h3 {
 
 .buttons {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     gap: 20px;
 }
@@ -152,20 +153,34 @@ h3 {
     padding: 10px;
     background-color: skyblue;
     color: white;
-    font-weight: 300;
+    font-weight: 200;
     font-size: 18px;
     border-radius: 20px;
-    border-color: white;
-    transition: background-color 0.5s;
-
+    border-color: black;
+    transition: background-color 0.5s, padding 0.5s;
 }
 
 .btn-yes:hover {
-    background-color: lightgreen;
+    background-color: rgb(69, 174, 69);
+    padding: 10px 30px;
 }
 
 .btn-no:hover {
-    background-color: rgb(209, 90, 114);
+    background-color: rgb(176, 47, 47);
+    padding: 10px 30px;
+}
+
+.card-img {
+    width: 300px;
+    height: auto;
+}
+
+.content-upper {
+    display: flex;
+}
+
+.upper-cards {
+    display: flex;
 }
 
 .footer {
