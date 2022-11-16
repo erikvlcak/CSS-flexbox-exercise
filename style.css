@@ -9,21 +9,37 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    background-repeat: no-repeat;
+    background-image: url(./images/blue-sky.webp);
+    background-attachment: fixed;
+    background-size: auto;
+    background-position: 0% 100%;
 }
 
 .header img {
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
+
 
 }
 
 .header {
     display: flex;
     background-color: skyblue;
-    padding: 8px 64px;
+    padding: 0px 64px;
     align-items: center;
-    /* flex-wrap: wrap; */
     border-bottom: 8px solid rgb(47, 179, 231);
+    opacity: 70%;
+    transition: opacity 0.5s, padding 0.5s;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.header:hover {
+    opacity: 100%;
+    padding: 15px 64px;
 }
 
 .header-items {
@@ -37,6 +53,7 @@ body {
     gap: 32px;
     flex: 1 0 0;
     font-weight: 300px;
+    margin: 8px;
 }
 
 .page-name {
@@ -51,12 +68,11 @@ body {
     text-decoration: none;
     color: white;
     font-weight: 300;
-    font-size: 23px;
+    font-size: 25px;
     transition: font-size 0.5s, color 0.5s;
 }
 
 a:hover {
-    font-size: 30px;
     text-decoration: underline white 1px;
 }
 
@@ -64,6 +80,7 @@ a:hover {
     flex: 1;
     display: flex;
     flex-direction: column;
+
 }
 
 .content-top {
@@ -73,9 +90,9 @@ a:hover {
     justify-content: center;
     flex: 1;
     gap: 50px;
-    min-height: 70vh;
-    background-image: url(./images/white-cloud-sky-background.jpg);
-    background-size: cover;
+    min-height: 80vh;
+
+
 }
 
 .content-top-panel {
@@ -95,9 +112,15 @@ a:hover {
 }
 
 .video {
-    width: 500px;
+    width: 400px;
     height: auto;
+    transition: height 0.7s;
+
 }
+
+/* .video:focus {
+    height: 250px;
+} */
 
 .top-intro {
     width: 600px;
@@ -139,6 +162,7 @@ h3 {
     margin: 0px;
     padding-bottom: 5px;
     text-align: justify;
+    padding-bottom: 8px;
 }
 
 .buttons {
@@ -171,16 +195,21 @@ h3 {
 }
 
 .card-img {
-    width: 300px;
-    height: auto;
-}
-
-.content-upper {
-    display: flex;
+    width: 400px;
+    height: 300PX;
+    object-fit: fill;
 }
 
 .upper-cards {
     display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+.card {
+
+    display: flex;
+    flex-flow: column;
 }
 
 .footer {
