@@ -2,6 +2,10 @@
     border: solid 1px red;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Advent Pro', sans-serif;
     margin: 0px;
@@ -14,6 +18,7 @@ body {
     background-attachment: fixed;
     background-size: auto;
     background-position: 0% 100%;
+
 }
 
 .header img {
@@ -26,20 +31,22 @@ body {
 .header {
     display: flex;
     background-color: skyblue;
-    padding: 0px 64px;
+    padding: 0px 50px;
     align-items: center;
-    border-bottom: 8px solid rgb(47, 179, 231);
-    opacity: 70%;
+    border-bottom: solid 4px transparent;
+    opacity: 50%;
     transition: opacity 0.5s, padding 0.5s;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
+    margin: 0px;
 }
 
 .header:hover {
     opacity: 100%;
-    padding: 15px 64px;
+    padding: 10px 50px;
+    border-bottom: solid 4px black;
 }
 
 .header-items {
@@ -72,7 +79,13 @@ body {
     transition: font-size 0.5s, color 0.5s;
 }
 
-a:hover {
+.buttons a {
+    text-decoration: none;
+    color: white;
+    font-weight: 300;
+}
+
+.header-items a:hover {
     text-decoration: underline white 1px;
 }
 
@@ -115,7 +128,6 @@ a:hover {
     width: 400px;
     height: auto;
     transition: height 0.7s;
-
 }
 
 /* .video:focus {
@@ -133,22 +145,14 @@ a:hover {
     flex: 1 1 auto;
 }
 
-.headline {
+.headline {}
+
+h1 {
     font-weight: 900;
     font-size: 50px;
     color: black;
     margin: 0px;
     text-align: center;
-
-}
-
-h1 {
-    color: black;
-    font-weight: 400;
-    font-size: 20px;
-    margin: 0px;
-    padding: 0px;
-    text-align: justify;
 }
 
 p {
@@ -157,12 +161,19 @@ p {
     text-align: justify;
 }
 
+h2 {
+    font-size: 40px;
+    padding: 5px;
+    margin: 12px 0px 24px;
+}
+
 h3 {
     color: black;
     margin: 0px;
     padding-bottom: 5px;
     text-align: justify;
     padding-bottom: 8px;
+    font-size: 25px;
 }
 
 .buttons {
@@ -184,33 +195,70 @@ h3 {
     transition: background-color 0.5s, padding 0.5s;
 }
 
+.btn-yes:hover,
+.btn-no:hover {
+    cursor: pointer;
+}
+
 .btn-yes:hover {
     background-color: rgb(69, 174, 69);
-    padding: 10px 30px;
+    padding: 10px 20px;
 }
 
 .btn-no:hover {
     background-color: rgb(176, 47, 47);
-    padding: 10px 30px;
+    padding: 10px 20px;
 }
 
 .card-img {
-    width: 400px;
-    height: 300PX;
+    width: 350px;
+    height: 250PX;
     object-fit: fill;
 }
+
+.content-upper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(skyblue, white);
+    border-top: solid 4px black;
+    border-bottom: solid 4px black;
+}
+
 
 .upper-cards {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
+    align-items: baseline;
 }
 
 .card {
-
     display: flex;
     flex-flow: column;
+    flex: 0 1 0;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: none;
+    height: 520px;
+    transition: background-color 0.5s;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    padding: 10px;
 }
+
+.card span {
+    font-size: 40px;
+    font-weight: 900;
+}
+
+.card:hover {
+    background-color: skyblue;
+    cursor: pointer;
+    border-top: solid 4px black;
+    border-bottom: solid 4px black;
+}
+
 
 .footer {
     background-color: skyblue;
@@ -218,6 +266,6 @@ h3 {
     font-size: 15px;
     padding: 10px;
     color: white;
-    border-top: 8px solid rgb(47, 179, 231);
+    border-top: solid 4px black;
     box-sizing: border-box;
 }
