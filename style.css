@@ -7,7 +7,7 @@ html {
 }
 
 body {
-    font-family: 'Advent Pro', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
     margin: 0px;
     padding: 0px;
     min-height: 100vh;
@@ -31,7 +31,7 @@ body {
 .header {
     display: flex;
     background-color: skyblue;
-    padding: 0px 50px;
+    padding: 0px 100px;
     align-items: center;
     border-bottom: solid 4px transparent;
     opacity: 50%;
@@ -45,7 +45,7 @@ body {
 
 .header:hover {
     opacity: 100%;
-    padding: 10px 50px;
+    padding: 10px 100px;
     border-bottom: solid 4px black;
 }
 
@@ -60,7 +60,7 @@ body {
     gap: 32px;
     flex: 1 0 0;
     font-weight: 300px;
-    margin: 8px;
+    margin: 0px;
 }
 
 .page-name {
@@ -81,9 +81,10 @@ body {
 
 .buttons a {
     text-decoration: none;
-    color: white;
+    color: black;
     font-weight: 300;
 }
+
 
 .header-items a:hover {
     text-decoration: underline white 1px;
@@ -98,7 +99,7 @@ body {
 
 .content-top {
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: column wrap;
     align-items: center;
     justify-content: center;
     flex: 1;
@@ -113,9 +114,10 @@ body {
     justify-content: space-between;
     align-items: center;
     gap: 50px;
-    padding: 12px 30px;
+    padding: 30px 30px;
     border-top: solid 4px black;
     border-bottom: solid 4px black;
+    margin-top: 60px;
 }
 
 .top-video {
@@ -127,12 +129,8 @@ body {
 .video {
     width: 400px;
     height: auto;
-    transition: height 0.7s;
+    border: 2px solid white;
 }
-
-/* .video:focus {
-    height: 250px;
-} */
 
 .top-intro {
     width: 600px;
@@ -199,7 +197,8 @@ h3,
 }
 
 .btn-yes,
-.btn-no {
+.btn-no,
+.btn-customers {
     padding: 10px;
     background-color: skyblue;
     color: white;
@@ -211,7 +210,8 @@ h3,
 }
 
 .btn-yes:hover,
-.btn-no:hover {
+.btn-no:hover,
+.btn-customers:hover {
     cursor: pointer;
 }
 
@@ -225,10 +225,18 @@ h3,
     padding: 10px 20px;
 }
 
+.btn-customers:hover {
+    background-color: goldenrod;
+    color: black;
+    padding: 10px 20px;
+}
+
 .card-img {
     width: 350px;
-    height: 250PX;
-    object-fit: fill;
+    height: 250px;
+    object-fit: cover;
+    border: 2px solid white;
+
 }
 
 .content-upper {
@@ -236,7 +244,7 @@ h3,
     flex-direction: column;
     /* align-items: center; */
     justify-content: space-around;
-    background-image: linear-gradient(skyblue, white);
+    background-image: linear-gradient(skyblue, rgba(255, 255, 255, 0.7));
     border-top: solid 4px black;
     border-bottom: solid 4px black;
     min-height: 90vh;
@@ -253,7 +261,7 @@ h3,
 .card {
     display: flex;
     flex-flow: column;
-    flex: 0 1 0;
+    flex: 0 1 400px;
     align-items: center;
     margin-bottom: 20px;
     background-color: none;
@@ -303,6 +311,7 @@ h3,
     border-left: solid 4px transparent;
     border-right: solid 4px transparent;
     transition: background-color 0.5s;
+    padding: 10px 0px 10px 0px;
 }
 
 .full-review:hover {
@@ -321,7 +330,8 @@ h3,
     width: 180px;
     object-fit: cover;
     object-position: 0% 40%;
-    padding-left: 10px;
+    margin-left: 10px;
+    border: 2px white solid;
 }
 
 .review {
@@ -340,7 +350,7 @@ h3,
 .footer {
     background-color: skyblue;
     text-align: center;
-    font-size: 15px;
+    font-size: 20px;
     padding: 10px;
     color: white;
     border-top: solid 4px black;
